@@ -1,7 +1,14 @@
-import '../styles/globals.css'
+import "../styles/globals.css";
+import { PodcasterProvider } from "../context/PodcasterProvider";
+import Header from "../components/Header";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <PodcasterProvider>
+      <Header />
+      <Component {...pageProps} />
+    </PodcasterProvider>
+  );
 }
 
-export default MyApp
+export default MyApp;
