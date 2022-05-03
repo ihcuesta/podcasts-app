@@ -28,7 +28,6 @@ export const getPodcasts = async () => {
 };
 
 export const getPodcast = async (id) => {
-  console.log(id);
   const parser = new Parser();
   let podcast = {};
 
@@ -38,7 +37,7 @@ export const getPodcast = async (id) => {
     const feed = await parser.parseURL(`${d.feedUrl}`);
     let episodes = [];
 
-    feed?.items?.slice(0, 10).forEach((e) => {
+    feed?.items?.forEach((e) => {
       episodes.push({
         id: e.guid,
         title: e.title,
@@ -55,11 +54,11 @@ export const getPodcast = async (id) => {
       name: d.trackName,
       url: d.feedUrl,
       artist: d.artistName,
+      description: feed.description,
       episodes: episodes,
     };
   } catch (err) {
     console.log(err);
   }
-  console.log(podcast);
   return podcast;
 };

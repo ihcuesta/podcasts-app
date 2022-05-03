@@ -5,24 +5,24 @@ import { useRouter } from "next/router";
 import { isEmpty } from "ramda";
 
 const Episode = () => {
-  const { contextPodcast, handleLoadPodcast } = usePodcaster();
+  const { podcast, handleLoadPodcast } = usePodcaster();
   const router = useRouter();
   const { episodeId, podcastId } = router.query;
   const [currentEpisode, setCurrentEpisode] = useState();
 
   useEffect(() => {
-    isEmpty(contextPodcast) && handleLoadPodcast(podcastId);
+    isEmpty(podcast) && handleLoadPodcast(podcastId);
   }, []);
 
   useEffect(() => {
-    const episode = contextPodcast?.episodes?.filter((e) => e.id === episodeId);
-    setCurrentEpisode(episode[0]);
+    const episode = podcast?.episodes?.filter((e) => e.id === episodeId);
+    episode && setCurrentEpisode(episode[0]);
   }, []);
 
   const { title, content, url } = currentEpisode || {};
 
   return (
-    <LayoutPodcast podcast={contextPodcast}>
+    <LayoutPodcast episode>
       <div className="shadow mb-4 p-5">
         <h2 className="font-bold">{title}</h2>
         <p>{content}</p>

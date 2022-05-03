@@ -15,18 +15,16 @@ export const formatDuration = (secs) => {
   return `${hours}${minutes}:${pad(secs)}`;
 };
 
-const getLocal = (entity) => window.localStorage.getItem(entity);
-const getLocalParsed = (entity) =>
+export const getLocal = (entity) => window.localStorage.getItem(entity);
+export const getLocalParsed = (entity) =>
   JSON.parse(window.localStorage.getItem(entity));
-const setLocal = (entity, data) =>
+export const setLocal = (entity, data) =>
   window.localStorage.setItem(entity, JSON.stringify(data));
 
-export const checkLSEntity = (entity, setState, apiFn, id) => {
-  console.log(id);
-  getLocal(entity)
-    ? setState(getLocalParsed(entity))
-    : apiFn(id).then((data) => {
-        setLocal(entity, data);
-        setState(data);
-      });
+export const includesStr = (prop, str) =>
+  prop.toLowerCase().includes(str.toLowerCase());
+
+export const dateTimestamp = (date) => moment(date).valueOf();
+export const last24h = (entity) => {
+  return dateTimestamp(new Date()) - getLocalParsed(entity) <= 86400000;
 };
