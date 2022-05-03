@@ -1,34 +1,62 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+### Podcaster
 
-## Getting Started
+Esta es una SPA (Single Page Application) que lista una serie de colecciones de podcasts con sus respectivas vistas de detalle y la posibilidad de reprodocir cada uno de sus podcasts.
 
-First, run the development server:
+Para desarrollar esta SPA he utilizado las siguientes tecnologías:
 
-```bash
-npm run dev
-# or
-yarn dev
+- **Next.js**: framework de React.
+- **Tailwind**: para dar estilos.
+- **Axios**: llamadas a la API.
+- **React Context**: gestión del estado de la aplicación.
+- **Local Storage**: almacenamiento de datos de forma local.
+- **Moment**: para trabajar con formatos de fecha.
+- **Ramda**: utilidades para manejo de objetos y arrays.
+- **RSS Parser**: conversiones de formato.
+
+La aplicación cuenta con un modo _development_, en el que se sirven los assets sin minimizar; y un modo _production_, donde se sirven los assets concatenados y minimizados.
+
+## Instalación local
+
+Se deberá clonar el repositorio:
+
+```
+https://github.com/ihcuesta/podcasts-app.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Se deben instalar las dependencias desde el directorio _podcasts-app_:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```
+npm install
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Ejecutar la aplicación en modo _development_
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Para correr la aplicación en desarrollo, ejecutar desde el directorio _podcasts-app_:
 
-## Learn More
+```
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+Este comando inicia un servidor local de desarrollo en [http://localhost:3000]http://localhost:3000. Este modo recarga la página al guardar cambios, por lo que es el ideal en la fase de desarrollo.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Ejecutar la aplicación en modo _production_
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Para correr la aplicación en producción primero debe compilarse el código. Ejecutar desde el directorio _podcasts-app_:
 
-## Deploy on Vercel
+```
+npm run build
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Seguidamente, debe iniciarse la versión compilada de la aplicación. Ejecutar desde el directorio _podcasts-app_:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```
+npm run start
+```
+
+Este comando inicia un servidor local de producción en [http://localhost:3000]http://localhost:3000. Este modo sirve una versión compilada del código, con los assets minificados y ficheros optimizados para un mejor rendimiento.
+
+# Contacto:
+
+Iván Herranz Cuesta
+Linkedin: [https://www.linkedin.com/in/ivanherranzcuesta/]https://www.linkedin.com/in/ivanherranzcuesta/
+Web: [https://ivanherranz.com/]https://ivanherranz.com/
