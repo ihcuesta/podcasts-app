@@ -1,4 +1,4 @@
-### Podcaster
+# Podcaster
 
 Esta es una SPA (Single Page Application) que lista una serie de colecciones de podcasts con sus respectivas vistas de detalle y la posibilidad de reprodocir cada uno de sus podcasts.
 
@@ -37,7 +37,7 @@ Para correr la aplicación en desarrollo, ejecutar desde el directorio _podcasts
 npm run dev
 ```
 
-Este comando inicia un servidor local de desarrollo en [http://localhost:3000]http://localhost:3000. Este modo recarga la página al guardar cambios, por lo que es el ideal en la fase de desarrollo.
+Este comando inicia un servidor local de desarrollo en [http://localhost:3000](http://localhost:3000). Este modo recarga la página al guardar cambios, por lo que es el ideal en la fase de desarrollo.
 
 ## Ejecutar la aplicación en modo _production_
 
@@ -53,10 +53,10 @@ Seguidamente, debe iniciarse la versión compilada de la aplicación. Ejecutar d
 npm run start
 ```
 
-Este comando inicia un servidor local de producción en [http://localhost:3000]http://localhost:3000. Este modo sirve una versión compilada del código, con los assets minificados y ficheros optimizados para un mejor rendimiento.
+Este comando inicia un servidor local de producción en [http://localhost:3000](http://localhost:3000). Este modo sirve una versión compilada del código, con los assets minificados y ficheros optimizados para un mejor rendimiento.
 
-# Contacto:
+### Contacto:
 
 Iván Herranz Cuesta
-Linkedin: [https://www.linkedin.com/in/ivanherranzcuesta/]https://www.linkedin.com/in/ivanherranzcuesta/
-Web: [https://ivanherranz.com/]https://ivanherranz.com/
+Linkedin: [www.linkedin.com/in/ivanherranzcuesta/](https://www.linkedin.com/in/ivanherranzcuesta/)
+Web: [ivanherranz.com/](https://ivanherranz.com/)
