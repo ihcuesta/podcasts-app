@@ -3,6 +3,7 @@ import usePodcaster from "../hooks/usePodcaster";
 import PodcastGridCard from "../components/PodcastGridCard";
 import SearchBar from "../components/SearchBar";
 import LoadingMask from "../components/LoadingMask";
+import NoData from "../components/NoData";
 
 export default function Home() {
   const { podcasts, handleLoadPodcasts, loading } = usePodcaster();
@@ -36,9 +37,7 @@ export default function Home() {
               })}
             </div>
           ) : (
-            <div className="flex justify-center w-full mt-20">
-              <p>No results found.</p>
-            </div>
+            <NoData home />
           )}
         </div>
       )}

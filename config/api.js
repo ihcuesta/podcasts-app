@@ -1,7 +1,7 @@
 import axios from "axios";
 import Parser from "rss-parser";
 
-const CORS_PROXY = "https://cors.io/?";
+// const CORS_PROXY = "https://cors.io/?";
 
 const axiosClient = axios.create({
   baseURL: `https://itunes.apple.com/`,

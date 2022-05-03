@@ -1,12 +1,14 @@
 import React from "react";
 import Link from "next/link";
 
-const NoData = () => {
+const NoData = ({ home = false }) => {
   return (
-    <div className="flex justify-center flex-col items-center w-full h-32">
+    <div className="flex justify-center flex-col items-center w-full h-36">
       <p className="text-xl">No results found</p>
       <Link href="/" passHref>
-        <span className="text-sky-600 cursor-pointer">Go home &gt;</span>
+        <span className="text-sky-600 cursor-pointer">
+          {home ? "Try again" : "Go home >"}
+        </span>
       </Link>
     </div>
   );

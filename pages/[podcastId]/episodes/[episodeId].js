@@ -25,7 +25,7 @@ const Episode = () => {
     <LayoutPodcast episode>
       <div className="shadow mb-4 p-5">
         <h2 className="font-bold">{title}</h2>
-        <p>{content}</p>
+        <p>{content?.replace(/<[^>]+>/g, "")}</p>
         {url && (
           <audio className="mt-7" controls autoPlay>
             <source src={url} type="audio/ogg" />
